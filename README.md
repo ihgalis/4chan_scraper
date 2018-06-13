@@ -2,9 +2,12 @@
 Scrapy based tool to grab all 4chan posts.
 
 ## Requirements
-You would need to have scrapy installed in order to run this scraper.
+You would need to have a couple of modules installed in order to run this scraper.
 
-`pip install scrapy`
+```
+pip install scrapy
+pip install pymongo
+```
 
 The current code is based on MongoDB. You should install it before you run the spider. Otherwise you would need to "bend" the pipline into another direction like a filesystem ([Write to JSON File with scrapy](https://docs.scrapy.org/en/latest/topics/item-pipeline.html#write-items-to-a-json-file))
 

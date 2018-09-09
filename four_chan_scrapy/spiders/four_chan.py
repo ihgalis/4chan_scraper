@@ -31,7 +31,6 @@ class FourChanSpider(scrapy.Spider):
         # Aktuelles Board auslesen
         currentboard = response.css("div.boardTitle::text").extract_first()
 
-        counter = 0
         # Durch jeden Post gehen
         for post in response.css("div.postContainer"):
             fcpost = FourChanScrapyItem()
@@ -51,6 +50,5 @@ class FourChanSpider(scrapy.Spider):
             postnum = post.css("span.postNum a::text").extract()
             fcpost['postnum'] = str(postnum[1])
 
-            counter += 1
             # save data
             yield fcpost
